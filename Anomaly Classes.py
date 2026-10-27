@@ -11,21 +11,24 @@ questions = {1: "Where have you come from?",
 #_____________________________________________________________
 
 class Individual:
-    # All anomaly defenitions.
-    ANOMALIES = {1: "Delayed Speech",
-        2: "Unusual Pallor",
-        3: "Irregular Breathing",
-        4: "Irregular Tremors",
-        5: "Speech Impediment",
-        6: "Inappropriate Responses"}
+    ANOMALIES = {
+        # Spoken/Dialogue Anomalies
+        1: "Delayed Speech",
+        2: "Irregular Breathing",
+        3: "Irregular Tremors",
+        4: "Speech Impediment",
+        5: "Inappropriate Responses",
+        6: "Eerie Echo",
+        7: "Weird Slips",
 
-    #initializing code for each subclass/objject
-    def __init__(self,
-        name,
-        backstory,
-        appearance,
-        dialogues,
-        anomaly_id=None):
+        # Physical/Appearance Anomalies
+        8: "Unusual Pallor",
+        9: "Infrequent Blinking",
+        10: "Faint Discoloration",
+        11: "Lag in Expression",
+    }
+
+    def __init__(self, name, backstory, appearance, dialogues, anomaly_id=None):
         self.name = name
         self.backstory = backstory
         self.appearance = appearance
